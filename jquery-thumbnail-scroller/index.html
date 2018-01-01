@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery-thumbnail-scroller</title>
+<meta name="description" content="jquery-thumbnail-scroller" />
+<meta name="keywords" content="jquery-thumbnail-scroller" />
+<meta name="robots" content="INDEX,FOLLOW" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script type='text/javascript' src='https://code.jquery.com/jquery-1.9.1.min.js'></script>
+<script type='text/javascript' src='js/jquery-thumbnail-scroller.js'></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script>
+	jQuery(document).ready(function() {
+		$('#unique-pager').StncThumbnailScroller({
+			scrollSpeed : 100,
+			fadeSpeed : 1000,
+			imagePictureAttr : '#showPicture'
+		});
+	});
+</script>
+</head>
+<body>
+  <div id="thumbnailsGallery">
+    <div class="pictureShow">
+      <img src="" alt="" id="showPicture">
+    </div>
+    <div data-direction="next" class="btn directionBtn">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+    <div id="unique-pager">
+      <ul>
+        <li><img data-src="images/broken-car-vehicle-vintage-large.jpg" src="images/broken-car-vehicle-vintage-large_tn.jpg"></li>
+        <li><img data-src="images/red-car-vehicle-vintage-large.jpg" src="images/red-car-vehicle-vintage-large_tn.jpg"></li>
+        <li><img data-src="images/night-car-mustang-ford-large.jpg" src="images/night-car-mustang-ford-large_tn.jpg"></li>
+        <li><img data-src="images/snow-winter-frozen-car-large.jpg" src="images/snow-winter-frozen-car-large_tn.jpg"></li>
+        <li><img data-src="images/car-vehicle-vintage-luxury-large.jpg" src="images/car-vehicle-vintage-luxury-large_tn.jpg"></li>
+        <li><img data-src="images/street-car-vehicle-vintage-large.jpg" src="images/street-car-vehicle-vintage-large_tn.jpg"></li>
+        <li><img data-src="images/black-and-white-dark-car-vehicle-large.jpg" src="images/black-and-white-dark-car-vehicle-large_tn.jpg"></li>
+      </ul>
+    </div>
+    <div data-direction="prev" class="btn directionBtn">
+      <i class="fa fa-arrow-down"></i>
+    </div>
+    <!-- end unique-pager -->
+  </div>
+</body>
