@@ -9,7 +9,7 @@
     <meta name="author" content="">
 
 
-    <title>ISOTOPE EASY ALTERNATIVE</title>
+    <title>STNC PROJECTS</title>
 
     <!-- Bootstrap core CSS -->
 
@@ -20,39 +20,7 @@
     <link rel="stylesheet" href="animate.css">
 
 
-    <script>
 
-        var $filterType = jQuery('#filterOptions li.active a').attr('class');
-
-        effect = 'animate bounce-in';
-
-        jQuery(document).ready(function ($) {
-
-            $data = jQuery('.marketing ul.ul-products').clone();
-
-            jQuery($data).appendTo('#selman');
-
-            jQuery('#stnc  li a').on('click', function () {
-
-                $data = jQuery('#selman ul').clone();
-
-       
-                jQuery('#stnc  li a').removeClass('selected');
-                jQuery(this).addClass('selected');
-         
-                var $filterType = jQuery(this).attr("data-filter-value");
-           
-
-                var $filteredData = $data.find('li[data-type=' + $filterType + ']');
-                $(".marketing ul li").remove();
-                $($filteredData).appendTo(".marketing ul");
-                $('.marketing ul li').addClass(effect);
-
-            });
-        });
-
-
-    </script>
 </head>
 
 <body>
@@ -73,38 +41,12 @@
                 </li>
             </ul>
         </nav>
-        <h3 class="text-muted">ISOTOPE EASY ALTERNATIVE</h3>
+        <h3 class="text-muted">Projects</h3>
     </div>
 
 
-    <div class="masonry-filter">
-        <div class="filter-action filter-action-center">
+My project list ---coming soon 
 
-            <ul id="stnc" data-filter-key="filter">
-
-
-
-                <li>
-                    <a  href="#" data-filter-value="clocks" class="selected">clocks</a>
-                </li>
-                <li>
-                    <a href="#" data-filter-value="Jewelry" class="">Jewelry</a>
-                </li>
-                <li>
-                    <a href="#" data-filter-value="fashion" class="">fashion</a>
-                </li>
-                <li>
-                    <a href="#" data-filter-value="other" class="">other</a>
-                </li>
-            </ul>
-
-
-        </div>
-
-
-    </div>
-
-    <div class="row marketing">
         <div class="col-lg-12">
             <div class="products-container padding_zero">
                 <ul class="ul-products products grid-sc-xs-1 grid-sc-sm-2 grid-sc-m-3 grid-sc-l-4">
