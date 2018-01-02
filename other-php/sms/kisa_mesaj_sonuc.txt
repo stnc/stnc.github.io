@@ -1,0 +1,41 @@
+Array
+(
+    [0] => Array
+        (
+            [Payload] => deneme
+B050
+            [Xser] => Array
+                (
+                )
+
+            [Cost] => 1.0000
+            [ErrorCode] => 0
+            [Id] => 7383611389
+            [LastUpdated] => 0001-01-01T00:00:00
+            [MSISDN] => 905530467545
+            [Network] => 1085
+            [Sequence] => 0
+            [State] => Scheduled
+            [Submitted] => 0001-01-01T00:00:00
+        )
+
+    [1] => Array
+        (
+            [Payload] => deneme
+B050
+            [Xser] => Array
+                (
+                )
+
+            [Cost] => 1.0000
+            [ErrorCode] => 0
+            [Id] => 7383611390
+            [LastUpdated] => 0001-01-01T00:00:00
+            [MSISDN] => 905452398161
+            [Network] => 1085
+            [Sequence] => 0
+            [State] => Scheduled
+            [Submitted] => 0001-01-01T00:00:00
+        )
+
+)

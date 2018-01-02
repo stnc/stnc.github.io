@@ -1,0 +1,204 @@
+
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>Google Maps</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false&callback=initialize&key=AIzaSyCvJBm85qq8-jueHszBS4_9TdtgrHnO4yE"></script>
+  </head>
+  <body onload="theNext()">
+
+
+    <div id="map_canvas" style="width:800px;height:800px;"></div>
+    <div id="messages"></div>
+
+    <script type="text/javascript">
+    //<![CDATA[
+
+
+    // delay between geocode requests - at the time of writing, 100 miliseconds seems to work well
+    var delay = 500;
+
+
+      // ====== Create map objects ======
+      var infowindow = new google.maps.InfoWindow();
+      var latlng = new google.maps.LatLng(21.627591, 39.110824);
+      var mapOptions = {
+        zoom:4,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+      var geo = new google.maps.Geocoder();
+      var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+      var bounds = new google.maps.LatLngBounds();
+
+      // ====== Geocoding ======
+      function getAddress(mapData, next) {
+
+var mapData = JSON.parse(mapData)
+
+
+
+      //  geo.geocode({address:mapData}, function (results,status)
+          var latlng_ = {lat: parseFloat(mapData.Latitude), lng: parseFloat(mapData.Longitude)};
+         geo.geocode({location: latlng}, function (results, status) {
+         //  geo.geocode({address:latlng_}, function (results,status){
+            // If that was successful
+            if (status == google.maps.GeocoderStatus.OK) {
+
+
+
+              // Lets assume that the first marker is the one we want
+              var p = results[0].geometry.location;
+              var lat=p.lat();
+              var lng=p.lng();
+              // Output the data
+                var msg = 'address="' + mapData.title + '" lat=' +lat+ ' lng=' +lng+ '(delay='+delay+'ms)<br>';
+                document.getElementById("messages").innerHTML += msg;
+              // Create a marker
+              createMarker(mapData );
+            }
+            // ====== Decode the error status ======
+            else {
+              // === if we were sending the requests to fast, try this one again and increase the delay
+              if (status == google.maps.GeocoderStatus.OVER_QUERY_LIMIT) {
+                nextAddress--;
+                delay++;
+              } else {
+                var reason="Code "+status;
+                var msg = 'address="' + mapData + '" error=' +reason+ '(delay='+delay+'ms)<br>';
+                document.getElementById("messages").innerHTML += msg;
+              }
+            }
+            next();
+          }
+        );
+      }
+
+	          //A utility function that translates a given type to an icon
+        function getIcon(type) {
+            switch (type) {
+                case "pharmacy":
+                    return "icons/drugstore.png";
+                case "hospital":
+                    return "icons/hospital-building.png";
+                case "shop":
+                    return "icon_bg-map-pin.png";
+                default:
+                    return "icons/footprint.png";
+            }
+        }
+
+     // ======= Function to create a marker
+     function createMarker(add) {
+       var contentString = add;
+       var mapData = add;
+
+
+
+	        var marker = new google.maps.Marker({
+                            map: map,
+                             position: new google.maps.LatLng(mapData.Latitude,mapData.Longitude),
+                           title: mapData.title,
+                         //  icon: getIcon(mapData.type),
+							 zIndex: Math.round(latlng.lat()*-100000)<<5
+                        });
+
+         var contentHtml = '<table class="table table-bordered" style="margin-top:1px;">' +
+             '<tbody><tr>' +
+             '<td class="label-sto"></td>' +
+             '<td><strong> ' + mapData.title + '</strong></td> ' +
+             '</tr> ' +
+             '<tr><tr>' +
+             '<td class="label-sto">Adres:</td>' +
+             '<td> ' + mapData.address + '</td> ' +
+             '</tr> ' +
+             '<tr>' +
+             '<td class="label-sto">Telefon:</td>' +
+             '<td>' + mapData.tel + '</td>' +
+             '</tr>' +
+             '<tr>' +
+             '<td class="label-sto">Mail:</td>' +
+             '<td>' + mapData.mail + '</td>' +
+             '</tbody></table>';
+         var infowindow = new google.maps.InfoWindow({
+             content: contentHtml
+         });
+      google.maps.event.addListener(marker, 'click', function() {
+         infowindow.setContent(contentString);
+         infowindow.open(map,marker);
+       });
+
+       bounds.extend(marker.position);
+
+     }
+
+      // ======= An array of locations that we want to Geocode ========
+      var addresses = [
+
+'{"address":"Red Sea Mall, First Floor, gate No: 5, King Abdulaziz Road, Jeddah, Saudi Arabia","title":"Red Sea Mall","Latitude":21.62783,"Longitude":39.110954,"type":"shop","tel":"--","mail":"--","loc":"ar"}',
+'{"address":"Prince Mohammad Bin Abdulaziz Street Tahlia. Jeddah Saudi Arabia P.O BOX : 53813","title":"Al Tahlia Mall","Latitude":21.547548,"Longitude":39.14295,"type":"shop","tel":"--","mail":"--","loc":"ar"}',
+'{"address":"King Abdul Aziz SQUARE , Al Fayhaa, Jeddah, Saudi Arabia","title":"Al Andulus Mall","Latitude":21.507355,"Longitude":39.218426,"type":"shop","tel":"--","mail":"--","loc":"ar"}',
+'{"address":"Teatralniy ploshet 5/1 Moscow","title":"Center Detsky Mir","Latitude":55.76005,"Longitude":37.625053,"type":"shop","tel":"--","mail":"--","loc":"ru"}',
+    '{"address":"Mkad 65-66 km Moscow Oblast","title":"Crocus City","Latitude":55.819187,"Longitude":37.38597,"type":"shop","tel":"--","mail":"--","loc":"ru"}',
+	'{"address":"Presnenskaya naberajnaya 2 Moscow","title":"Afimall","Latitude":55.749115,"Longitude":37.539528,"type":"shop","tel":"","mail":"--","loc":"ru"}',
+			'{"address":"Novoryazanskoye sh,8,Moskovskaya oblast Rusya,140053","title":"Outlet Village Belaya Dacha","Latitude":55.66083,"Longitude":37.879524,"type":"shop","tel":"+7849 577 52477","mail":"--","loc":"ru"}',
+			'{"address":"Novoryazanskoye sh,8,Moskovskaya oblast Rusya,140053","title":"Outlet Village Belaya Dacha","Latitude":55.66083,"Longitude":38.879524,"type":"shop","tel":"+7849 577 52477","mail":"--","loc":"ru"}',
+			'{"address":"Novoryazanskoye sh,8,Moskovskaya oblast Rusya,140053","title":"Outlet Village Belaya Dacha","Latitude":6.318711,"Longitude":29.432373,"type":"shop","tel":"+7849 577 52477","mail":"--","loc":"ru"}',
+      ];
+
+      // ======= Global variable to remind us what to do next
+      var nextAddress = 0;
+
+      // ======= Function to call the next Geocode operation when the reply comes back
+
+      function theNext() {
+
+        if (nextAddress < addresses.length) {
+
+        // setTimeout(getAddress(addresses[nextAddress],theNext), delay);
+          setTimeout("getAddress('"+addresses[nextAddress]+"',theNext)", delay);
+          nextAddress++;
+        } else {
+          // We're done. Show map bounds
+          map.fitBounds(bounds);
+        }
+      }
+
+
+    jQuery(document).on("click", ".loc", function () {
+        var thisloc = $(this).data("locid");
+        for (var i = 0; i < markers.length; i++) {
+            if (markers[i].locid == thisloc) {
+                //get the latlong
+                if (lastinfowindow instanceof google.maps.InfoWindow) lastinfowindow.close();
+                map.panTo(markers[i].getPosition());
+                markers[i].infowindow.open(map, markers[i]);
+                lastinfowindow = markers[i].infowindow;
+            }
+        }
+    });
+      // ======= Call that function for the first time =======
+
+
+	     /* window.onload = function () {
+		  alert ("ds");
+		  theNext();
+        };*/
+
+    // This Javascript is based on code provided by the
+    // Community Church Javascript Team
+    // http://www.bisphamchurch.org.uk/
+    // http://econym.org.uk/gmap/
+
+    //]]>
+    </script>
+  </body>
+
+</html>
+
+
+
+
