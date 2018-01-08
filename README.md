@@ -9,7 +9,7 @@ My jquery plugin project web sites
 <ul>
       <li><a href="https://github.com/stnc-php/">php </a></li>
         <li><a href="https://github.com/stnc-magento">magento  </a></li>
-           <li><a href="  https://github.com/stnc-go">go lang /golang   </a></li>
+           <li><a href="https://github.com/stnc-go">go lang /golang   </a></li>
     <li><a href="https://github.com/stnc-python">python </a></li>
     <li><a href="https://github.com/stnc-java">java  </a></li>
         <li><a href="https://github.com/stnc-javascript">javascript  </a></li>
