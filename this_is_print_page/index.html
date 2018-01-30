@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Bare - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <style>
+        body {
+            padding-top: 54px;
+        }
+
+        @media (min-width: 992px) {
+            body {
+                padding-top: 56px;
+            }
+        }
+
+        .printPage {
+            -moz-box-shadow: 0px 10px 14px -7px #3e7327;
+            -webkit-box-shadow: 0px 10px 14px -7px #3e7327;
+            box-shadow: 0px 10px 14px -7px #3e7327;
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77b55a), color-stop(1, #72b352));
+            background: -moz-linear-gradient(top, #77b55a 5%, #72b352 100%);
+            background: -webkit-linear-gradient(top, #77b55a 5%, #72b352 100%);
+            background: -o-linear-gradient(top, #77b55a 5%, #72b352 100%);
+            background: -ms-linear-gradient(top, #77b55a 5%, #72b352 100%);
+            background: linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#77b55a', endColorstr='#72b352', GradientType=0);
+            background-color: #77b55a;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+            border: 1px solid #4b8f29;
+            display: inline-block;
+            cursor: pointer;
+            color: #ffffff;
+            font-family: Arial;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 8px 33px;
+            text-decoration: none;
+            text-shadow: 0px 1px 0px #5b8a3c;
+            float: right;
+            margin: 10px;
+            color: #fff;
+        }
+    </style>
+    <script>
+        function printPage(id) {
+            var html = "<html>";
+            html += document.getElementById(id).innerHTML;
+            html += "</html>";
+            var printWin = window.open('', '', 'left=0,top=0,width=800,height=800,toolbar=0,scrollbars=0,status  =0');
+            printWin.document.write(html);
+            printWin.document.close();
+            printWin.focus();
+            printWin.print();
+            printWin.close();
+        }
+    </script>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h1 class="mt-5">A Bootstrap 4 Starter Template</h1>
+            <p class="lead">
+                <a class="printPage" href="#" onclick="printPage('mydivPrint');"> Bu sayfayı yazdır </a>
+
+            <div id="mydivPrint">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lobortis feugiat vivamus at augue eget
+                arcu dictum varius. Condimentum mattis pellentesque id nibh tortor id aliquet lectus. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Vulputate
+                mi sit amet mauris. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Ornare arcu dui vivamus arcu felis bibendum ut. Nibh mauris cursus mattis
+                molestie a iaculis at erat pellentesque. Arcu cursus vitae congue mauris rhoncus aenean. Nullam vehicula ipsum a arcu cursus. Aliquet risus feugiat in ante metus
+                dictum at tempor. Pulvinar neque laoreet suspendisse interdum consectetur libero id. Porttitor leo a diam sollicitudin tempor id. Ornare lectus sit amet est.
+                Ultricies mi eget mauris pharetra et ultrices neque ornare aenean. Ultrices in iaculis nunc sed augue lacus viverra. Ultrices eros in cursus turpis massa tincidunt
+                dui. Lacus viverra vitae congue eu. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Vulputate eu scelerisque felis imperdiet proin fermentum leo
+                vel. Sit amet est placerat in egestas. Ultrices vitae auctor eu augue ut. Amet volutpat consequat mauris nunc congue. Sed pulvinar proin gravida hendrerit. Aliquet
+                eget sit amet tellus cras adipiscing. Eget gravida cum sociis natoque penatibus et magnis. Rhoncus urna neque viverra justo nec ultrices dui sapien. Fermentum et
+                sollicitudin ac orci. Volutpat ac tincidunt vitae semper quis lectus nulla at volutpat. Tristique et egestas quis ipsum suspendisse ultrices gravida dictum fusce.
+                In dictum non consectetur a erat nam at lectus urna. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate. In arcu cursus
+                euismod quis viverra nibh cras. In nibh mauris cursus mattis molestie a. Leo vel orci porta non. Enim nulla aliquet porttitor lacus luctus accumsan tortor.
+                Porttitor lacus luctus accumsan tortor posuere ac. Porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Bibendum arcu vitae elementum
+                curabitur. Erat nam at lectus urna duis convallis. Orci eu lobortis elementum nibh tellus molestie nunc non. Nulla facilisi etiam dignissim diam quis enim. Dui
+                sapien eget mi proin sed libero enim. Et netus et malesuada fames ac turpis egestas. Et malesuada fames ac turpis egestas integer. Aliquet risus feugiat in ante
+                metus dictum at tempor commodo. Quis enim lobortis scelerisque fermentum dui faucibus in ornare. Congue eu consequat ac felis donec et odio. Elit pellentesque
+                habitant morbi tristique senectus et netus. Cras pulvinar mattis nunc sed blandit libero volutpat.
+
+                <br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lobortis feugiat vivamus at augue eget
+                arcu dictum varius. Condimentum mattis pellentesque id nibh tortor id aliquet lectus. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Vulputate
+                mi sit amet mauris. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Ornare arcu dui vivamus arcu felis bibendum ut. Nibh mauris cursus mattis
+                molestie a iaculis at erat pellentesque. Arcu cursus vitae congue mauris rhoncus aenean. Nullam vehicula ipsum a arcu cursus. Aliquet risus feugiat in ante metus
+                dictum at tempor. Pulvinar neque laoreet suspendisse interdum consectetur libero id. Porttitor leo a diam sollicitudin tempor id. Ornare lectus sit amet est.
+                Ultricies mi eget mauris pharetra et ultrices neque ornare aenean. Ultrices in iaculis nunc sed augue lacus viverra. Ultrices eros in cursus turpis massa tincidunt
+                dui. Lacus viverra vitae congue eu. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Vulputate eu scelerisque felis imperdiet proin fermentum leo
+                vel. Sit amet est placerat in egestas. Ultrices vitae auctor eu augue ut. Amet volutpat consequat mauris nunc congue. Sed pulvinar proin gravida hendrerit. Aliquet
+                eget sit amet tellus cras adipiscing. Eget gravida cum sociis natoque penatibus et magnis. Rhoncus urna neque viverra justo nec ultrices dui sapien. Fermentum et
+                sollicitudin ac orci. Volutpat ac tincidunt vitae semper quis lectus nulla at volutpat. Tristique et egestas quis ipsum suspendisse ultrices gravida dictum fusce.
+                In dictum non consectetur a erat nam at lectus urna. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate. In arcu cursus
+                euismod quis viverra nibh cras. In nibh mauris cursus mattis molestie a. Leo vel orci porta non. Enim nulla aliquet porttitor lacus luctus accumsan tortor.
+                Porttitor lacus luctus accumsan tortor posuere ac. Porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Bibendum arcu vitae elementum
+                curabitur. Erat nam at lectus urna duis convallis. Orci eu lobortis elementum nibh tellus molestie nunc non. Nulla facilisi etiam dignissim diam quis enim. Dui
+                sapien eget mi proin sed libero enim. Et netus et malesuada fames ac turpis egestas. Et malesuada fames ac turpis egestas integer. Aliquet risus feugiat in ante
+                metus dictum at tempor commodo. Quis enim lobortis scelerisque fermentum dui faucibus in ornare. Congue eu consequat ac felis donec et odio. Elit pellentesque
+                habitant morbi tristique senectus et netus. Cras pulvinar mattis nunc sed blandit libero volutpat.
+                <br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lobortis feugiat vivamus at augue eget
+                arcu dictum varius. Condimentum mattis pellentesque id nibh tortor id aliquet lectus. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Vulputate
+                mi sit amet mauris. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Ornare arcu dui vivamus arcu felis bibendum ut. Nibh mauris cursus mattis
+                molestie a iaculis at erat pellentesque. Arcu cursus vitae congue mauris rhoncus aenean. Nullam vehicula ipsum a arcu cursus. Aliquet risus feugiat in ante metus
+                dictum at tempor. Pulvinar neque laoreet suspendisse interdum consectetur libero id. Porttitor leo a diam sollicitudin tempor id. Ornare lectus sit amet est.
+                Ultricies mi eget mauris pharetra et ultrices neque ornare aenean. Ultrices in iaculis nunc sed augue lacus viverra. Ultrices eros in cursus turpis massa tincidunt
+                dui. Lacus viverra vitae congue eu. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Vulputate eu scelerisque felis imperdiet proin fermentum leo
+                vel. Sit amet est placerat in egestas. Ultrices vitae auctor eu augue ut. Amet volutpat consequat mauris nunc congue. Sed pulvinar proin gravida hendrerit. Aliquet
+                eget sit amet tellus cras adipiscing. Eget gravida cum sociis natoque penatibus et magnis. Rhoncus urna neque viverra justo nec ultrices dui sapien. Fermentum et
+                sollicitudin ac orci. Volutpat ac tincidunt vitae semper quis lectus nulla at volutpat. Tristique et egestas quis ipsum suspendisse ultrices gravida dictum fusce.
+                In dictum non consectetur a erat nam at lectus urna. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate. In arcu cursus
+                euismod quis viverra nibh cras. In nibh mauris cursus mattis molestie a. Leo vel orci porta non. Enim nulla aliquet porttitor lacus luctus accumsan tortor.
+                Porttitor lacus luctus accumsan tortor posuere ac. Porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Bibendum arcu vitae elementum
+                curabitur. Erat nam at lectus urna duis convallis. Orci eu lobortis elementum nibh tellus molestie nunc non. Nulla facilisi etiam dignissim diam quis enim. Dui
+                sapien eget mi proin sed libero enim. Et netus et malesuada fames ac turpis egestas. Et malesuada fames ac turpis egestas integer. Aliquet risus feugiat in ante
+                metus dictum at tempor commodo. Quis enim lobortis scelerisque fermentum dui faucibus in ornare. Congue eu consequat ac felis donec et odio. Elit pellentesque
+                habitant morbi tristique senectus et netus. Cras pulvinar mattis nunc sed blandit libero volutpat.
+            </p>
+
+        </div>
+        <ul class="list-unstyled">
+            <li>Bootstrap 4.0.0</li>
+            <li>jQuery 3.3.0</li>
+        </ul>
+    </div>
+</div>
+</div>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
