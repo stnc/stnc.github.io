@@ -4,7 +4,8 @@ My jquery plugin project web sites
     <li><a href="https://stnc.github.io/jquery-thumbnail-scroller/">thumbnail-scroller </a></li>
     <li><a href="https://stnc.github.io/isotope-easy-alternative/">Isotope  </a></li>
         <li><a href="https://stnc.github.io/google-maps">Google maps example  </a></li>
-         <li><a href="https://stnc.github.io/this_is_print_page">Javasciprt This Print Page</a></li>
+         <li><a href="https://stnc.github.io/this_is_print_page">Javasscript This Print Page</a></li>
+         <li><a href="https://stnc.github.io/this_is_print_page">A Bootstrap 4 skeleton</a></li>
 </ul>
 #### my Organizations ###
 <ul>

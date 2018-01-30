@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0da69023-08ef-4bd1-96a6-64c18d43fad2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="$PROJECT_DIR$/this_is_print_page/index.html" afterPath="$PROJECT_DIR$/this_is_print_page/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,8 +17,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/this_is_print_page/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="68" column="9" lean-forward="false" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="9" />
+            <state relative-caret-position="442">
+              <caret line="109" column="95" lean-forward="false" selection-start-line="109" selection-start-column="95" selection-end-line="109" selection-end-column="95" />
               <folding />
             </state>
           </provider>
@@ -37,8 +38,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="136">
-                <caret line="6" column="100" lean-forward="false" selection-start-line="6" selection-start-column="100" selection-end-line="6" selection-end-column="100" />
+              <first_editor relative-caret-position="170">
+                <caret line="7" column="87" lean-forward="false" selection-start-line="7" selection-start-column="87" selection-end-line="7" selection-end-column="87" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -65,8 +66,8 @@
       <list>
         <option value="$PROJECT_DIR$/google-maps/index.html" />
         <option value="$PROJECT_DIR$/html5-CSS3-site/index.html" />
-        <option value="$PROJECT_DIR$/this_is_print_page/index.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/this_is_print_page/index.html" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -150,12 +151,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517321034998</updated>
-      <workItem from="1517321037284" duration="2348000" />
+      <workItem from="1517321037284" duration="2432000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2348000" />
+    <option name="totallyTimeSpent" value="2432000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -218,14 +219,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/this_is_print_page/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="68" column="9" lean-forward="false" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -234,11 +227,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/this_is_print_page/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="109" column="95" lean-forward="false" selection-start-line="109" selection-start-column="95" selection-end-line="109" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="136">
-            <caret line="6" column="100" lean-forward="false" selection-start-line="6" selection-start-column="100" selection-end-line="6" selection-end-column="100" />
+          <first_editor relative-caret-position="170">
+            <caret line="7" column="87" lean-forward="false" selection-start-line="7" selection-start-column="87" selection-end-line="7" selection-end-column="87" />
             <folding />
           </first_editor>
           <second_editor />
