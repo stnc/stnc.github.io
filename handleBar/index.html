@@ -13,7 +13,7 @@
     
 
     <!-- Bootstrap core CSS -->
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="bootstrap.min.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -150,7 +150,7 @@ INFO
 </main>
 
 
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
 
       <script src="offcanvas.js"></script>
 
@@ -166,7 +166,8 @@ MultipleDataCall()
 
 
 function SingleDataCall() {
-    fetch("https://reqres.in/api/users/1", //user.json
+  //  fetch("https://reqres.in/api/users/1", //user.json
+    fetch("user.json", //user.json
     {
         method: 'GET',
         headers: {'X-Requested-With': 'XMLHttpRequest'}
@@ -196,7 +197,8 @@ function SingleDataCall() {
 
 function MultipleDataCall() {
   ///fetch("http://jsonplaceholder.typicode.com/users", //users.json
-  fetch("https://reqres.in/api/users", //users.json
+//  fetch("https://reqres.in/api/users", //users.json
+  fetch("users.json", //users.json
   {
       method: 'GET',
       headers: {'X-Requested-With': 'XMLHttpRequest'}
