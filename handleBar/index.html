@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.80.0">
+    <title>handlebar js Example </title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/offcanvas/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="offcanvas.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+    
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Main navigation">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">HANDLEBAR.js Example</a>
+    <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="offcanvas" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+  </div>
+</nav>
+
+
+
+<main class="container">
+  <div class="d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm">
+    <img class="me-3" src="../assets/brand/bootstrap-logo-white.svg" alt="" width="48" height="38">
+    <div class="lh-1">
+      <h1 class="h6 mb-0 text-white lh-1">HANDLEBAR.js Example</h1>
+      <small>handlebar </small>
+    </div>
+  </div>
+
+<h1>SINGLE DATA test</h1>
+  <div class="row h-100 justify-content-center align-items-center">
+    <div class="card">
+      <div class="card-header">
+        <div class="profile_pic">
+          <img src="https://avatars.githubusercontent.com/u/3958405?s=460&u=233e8b0740678c58b85796541ece247302e32f94&v=4">
+        </div>
+      </div>
+      <div class="card-body">
+        <div id="singleItems" class="d-lfex justify-content-center flex-column">
+          <script id="singleItemsTpl" type="text/x-handlebars-template">
+            <div class="name_container">
+              <div class="name-">{{data.first_name}} {{data.last_name}} </div>
+            </div>
+            <div class="address"><strong>Mail:</strong> {{data.email}} </div>
+
+            web site 
+            <hr>
+            <div class="address">{{support.url}} </div>
+<hr>
+INFO
+            <div class="address"> {{support.text}} </div>
+
+
+          </script>
+    
+        </div>
+  
+        <div class="info_container">
+          <div class="info">
+            <p>followers</p>
+            <p>2.89M</p>								
+          </div>
+          <div class="info">
+            <p>followings</p>
+            <p>456</p>							
+          </div>
+          <div class="info">
+            <p>posts</p>
+            <p>3.56K</p>						
+          </div>			
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<h1>Multiple Data TEST</h1>
+
+  <div class="my-3 p-3 bg-body rounded shadow-sm">
+    <h6 class="border-bottom pb-2 mb-0">User List</h6>
+    <div class="d-flex text-muted pt-3">
+
+      <script id="multipleItemsTpl" type="text/x-handlebars-template">
+        {{#each data}}
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="profile_pic6">
+              <img src="{{avatar}}">
+            </div>
+          </div>  
+
+          <div class="col-md-6">
+            <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
+              <div class="d-flex justify-content-between">
+                <strong class="text-gray-dark">{{first_name}} {{last_name}}</strong>
+              </div>
+
+              <span class="d-block"><strong>Mail:</strong> {{email}} </span>
+
+            </div>
+          </div>
+        </div>
+  
+       {{/each}}
+<strong>Info</strong>
+<p>{{support.text}}</p>
+
+    </script>
+      <div id="multipleItems">
+        
+      </div>
+
+    </div>
+
+
+  </div>
+</main>
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+      <script src="offcanvas.js"></script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+
+
+<script type="text/javascript">
+
+
+SingleDataCall()
+MultipleDataCall()
+
+
+function SingleDataCall() {
+    fetch("https://reqres.in/api/users/1", //user.json
+    {
+        method: 'GET',
+        headers: {'X-Requested-With': 'XMLHttpRequest'}
+        })
+        .then(response => {
+        if( response.ok ) {
+            return response.json()
+        } else {
+        console.log("error")
+        }
+        })
+        .then(data => {
+      
+            console.log(data)
+    
+            let cartSelectTemplate = jQuery('#singleItemsTpl').html();
+            let TemplateCompileCartSelect = Handlebars.compile(cartSelectTemplate);
+            let CompiledHtmlCartSelect = TemplateCompileCartSelect(data);
+            jQuery('#singleItems').html(CompiledHtmlCartSelect);
+      
+        })
+        .catch((error) => {
+            console.log("error")
+        });
+}
+
+
+function MultipleDataCall() {
+  ///fetch("http://jsonplaceholder.typicode.com/users", //users.json
+  fetch("https://reqres.in/api/users", //users.json
+  {
+      method: 'GET',
+      headers: {'X-Requested-With': 'XMLHttpRequest'}
+      })
+      .then(response => {
+      if( response.ok ) {
+          return response.json()
+      } else {
+      console.log("error")
+      }
+      })
+      .then(data => {
+    
+          console.log(data)
+  
+          let cartSelectTemplate = jQuery('#multipleItemsTpl').html();
+          let TemplateCompileCartSelect = Handlebars.compile(cartSelectTemplate);
+          let CompiledHtmlCartSelect = TemplateCompileCartSelect(data);
+          jQuery('#multipleItems').html(CompiledHtmlCartSelect);
+    
+      })
+      .catch((error) => {
+          console.log("error")
+      });
+}
+
+</script>
+
+<!-- 
+  pongo2 and django template 
+  {% verbatim %}
+                              
+<ul>
+  <li>{{post.title}}</li>
+  <li>{{post.cat.title}}</li>
+
+ </ul>
+
+{% endverbatim %} -->
+
+  </body>
+</html>
